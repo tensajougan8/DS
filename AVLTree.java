@@ -5,6 +5,7 @@
  */
 package avl.tree;
 
+import static java.lang.Integer.max;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -12,8 +13,8 @@ import java.util.Scanner;
  *
  * @author MScIT19
  */
-public class AVLTree {
-   static class Node //create nodes
+
+   class Node //create nodes
    { 
         int key; 
         Node left, right; 
@@ -23,7 +24,9 @@ public class AVLTree {
             key = item; 
             left = right = null; 
         } 
-    } 
+    }
+public class AVLTree {
+  
    public static Node insert(Node r, int key)
    {
        Node new_node = new Node(key);
@@ -58,22 +61,35 @@ public class AVLTree {
        return y;
    }
    
-   public static Node balance(Node r)
+   Node n = null;
+  public static int height(Node r)
    {
-    Node x = r;
-    Node right = null;
-    Node left = null;
-    
-    while(x.right != null || x.left != null)
-    {
-        x.right = right;
-        x.left = left;
-        if(right.right == null || right.left == null)
+       int left,height;
+       int right;
+       if(r == null)
         {
-            
+            return 0;
         }
+        else
+        
+            left = height(r.left);
+            right = height(r.right);
+            height = max(left,right)+1;
+            balance(r,r.key);
+            System.out.println("Balance factor " +balance(r,r.key));
+            return height;
     }
+  public static int balance( Node b, int g)
+   {
+//       int bf;
+//       bf = l-r;
+
+       return g;
    }
+//   public static Node rotate(Node x)
+//   {
+//       
+//   }
     /**
      * @param args the command line arguments
      */
@@ -102,9 +118,10 @@ public class AVLTree {
             try
             {
                 System.out.println("1.Insert");
-                System.out.println("2.Delete");
+                System.out.println("2.Delete"); 
                 System.out.println("3.Print");
-                System.out.println("4.Stop");
+                System.out.println("4.Height");
+                System.out.println("5.Stop");
 
                 int n = input.nextInt();
 
@@ -112,7 +129,7 @@ public class AVLTree {
                 case 1:
                     int v = input.nextInt();
                     insert(root,v);
-                    balance(root);
+                    height(root);
                    break;
                     
                case 2: 
@@ -124,6 +141,10 @@ public class AVLTree {
                    break;
                    
                case 4: 
+                   System.out.println("The height of the tree is " +height(root));
+                   break;
+                   
+                case 5: 
                    swt = true;
                    break;
                    
