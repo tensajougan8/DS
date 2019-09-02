@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+//To find if the sequence is of the increasing or decreasing order using queue and stack
 package eva;
 
 import java.util.LinkedList;
