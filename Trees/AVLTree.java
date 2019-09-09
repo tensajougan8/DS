@@ -49,6 +49,7 @@ public class AVLTree {
         if (y == null)  
         {
             y = new_node;
+            return y;
         }  
         else if(key>y.key)
         {
@@ -61,35 +62,18 @@ public class AVLTree {
        return y;
    }
    
-   Node n = null;
-  public static int height(Node r)
-   {
-       int left,height;
-       int right;
-       if(r == null)
-        {
+ public static int height (Node N) {
+        if (N == null)
             return 0;
-        }
-        else
-        
-            left = height(r.left);
-            right = height(r.right);
-            height = max(left,right)+1;
-            balance(r,r.key);
-            System.out.println("Balance factor " +balance(r,r.key));
-            return height;
+        return N.height;
     }
-  public static int balance( Node b, int g)
-   {
-//       int bf;
-//       bf = l-r;
 
-       return g;
-   }
-//   public static Node rotate(Node x)
-//   {
-//       
-//   }
+   public static int getBalance(Node N) {
+        if (N == null)
+            return 0;
+        return height(N.left) - height(N.right);
+    }
+
     /**
      * @param args the command line arguments
      */
