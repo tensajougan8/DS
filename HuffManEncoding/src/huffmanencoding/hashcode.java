@@ -7,7 +7,7 @@ package huffmanencoding;
 
 /**
  *
- * @author MScIT19
+ * @author tensajougan8
  */
 public class hashcode
 {
