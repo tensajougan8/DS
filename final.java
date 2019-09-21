@@ -159,6 +159,20 @@ public class combinations {
 				}
 
 			}
+				for (HashMap.Entry<String, Integer> entry : test.com3.entrySet()) {
+				key = entry.getKey();
+				ID1 = entry.getValue();
+				System.out.println(key + " : " + ID1);
+
+				// System.out.println(ID1 + " support " + counttrans);
+				g = (float) ID1 / counttrans * 100;
+				// System.out.println(key + " support " + g);
+				if (g > 10) {
+					test.support2.put(key, (int) g);
+					System.out.println(key + " > " + g);
+				}
+
+			}
 
 			// conf
 			int ID2;
