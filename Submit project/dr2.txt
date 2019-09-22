@@ -1,0 +1,11 @@
+ID Items
+1  laptop,printer,tablet,headset
+2  printer,monitor,tablet
+3  laptop,printer,tablet,headset
+4  laptop,monitor,tablet,headset
+5  printer,monitor,tablet,headset
+6  printer,tablet,headset 
+7  monitor,tablet
+8  laptop,printer,monitor
+9  laptop,tablet,headset
+10 printer,tablet
