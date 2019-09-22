@@ -218,11 +218,20 @@ public class combinations {
 					if (key2.contains(key1)) {
 						ID1 = entry2.getValue();
 						ID2 = entry.getValue();
+						String[] splitStr = key2.split("\\s+");
+						String[] splitStr1 = key1.split("\\s+");
 						ID3 = (float) ID2 / ID1 * 100;
 						if (ID3 > 70 && ID3 <= 100) {
+							for (i = 0; i < splitStr.length; i++) {
+								for (i = 0; i < splitStr.length; i++) {
+									if (splitStr1.equals(splitStr)) {
+									} else {
 
-							String item1 = entry.getKey() + "=>" + entry2.getKey();
-							test.confmap2.put(item1, (int) ID3);
+										String item1 = entry2.getKey() + "=>" + splitStr[i];
+										test.confmap2.put(item1, (int) ID3);
+									}
+								}
+							}
 
 						}
 					}
