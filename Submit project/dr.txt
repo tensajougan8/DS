@@ -1,0 +1,5 @@
+ID Item
+1  Milk,butter,bread
+2  milk,butter
+3  butter,milk,bread
+4  bread,Carrot

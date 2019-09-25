@@ -1,0 +1,12 @@
+ if(r != null){
+            r.height = height(r); 
+                 //Math.max(height(r.left), height(r.right)) + 1;
+            balance = getBalance(r);
+            System.out.println(+getBalance(r));
+        } else//y is the root which is yet to be assigned
+        {
+            y.height = height(y); 
+                 //Math.max(height(r.left), height(r.right)) + 1;
+            balance = getBalance(y);
+            System.out.println(+getBalance(y));
+        }
